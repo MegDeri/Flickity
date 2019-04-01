@@ -1,5 +1,5 @@
 # Flickity
-
+https://megderi.github.io/Flickity/
 Features
 Carousel with 5 slides, hash links, scroll bar and restart button.
 Hash links will select slides on click.
