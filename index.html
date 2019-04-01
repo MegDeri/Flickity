@@ -7,19 +7,45 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Damion|Open+Sans|Roboto+Condensed">
     <link rel="stylesheet" type="text/css" href="vendor/normalize.css">
-    <link rel="stylesheet" type="text/css" href="vendor/flickity.min.css">
+    <link rel="stylesheet" type="text/css" href="vendor/flickity.min.css" media="screen">
     <link rel="stylesheet" type="text/css" href="css/style.css">
 </head>
 <body>
         <div class="main-carousel">
-            <div class="carousel-cell">...</div>
-            <div class="carousel-cell">...</div>
-            <div class="carousel-cell">...</div>
-            <div class="carousel-cell">...</div>
-            <div class="carousel-cell">...</div>
+            <div class="carousel-cell" id="carousel-cell1">
+                <div class="container">First slide</div>
+                <div class="img" style="background-image: url(https://images.pexels.com/photos/1229846/pexels-photo-1229846.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500);"></div>
+            </div>   
+            <div class="carousel-cell" id="carousel-cell2">
+               <div class="container">Second slide</div>
+               <div class="img" style="background-image: url(https://images.pexels.com/photos/2031726/pexels-photo-2031726.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500);"></div>
+            </div>   
+            <div class="carousel-cell" id="carousel-cell3">
+                <div class="container">Third slide</div>
+                <div class="img" style="background-image: url(https://images.pexels.com/photos/1640777/pexels-photo-1640777.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500);"></div>
+            </div>   
+            <div class="carousel-cell" id="carousel-cell4">
+                <div class="container">Fourth slide</div>
+                <div class="img" style="background-image: url(https://images.pexels.com/photos/1048036/pexels-photo-1048036.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500);"></div>
+            </div>   
+            <div class="carousel-cell" id="carousel-cell5">
+                <div class="container">Fifth slide</div>
+                <div class="img" style="background-image: url(https://images.pexels.com/photos/1367188/pexels-photo-1367188.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500);"></div>
+            </div>   
         </div>
-
+        <div class="progress-bar"></div>
+        <p>
+            <a href="#carousel-cell1">View cell 1</a>,
+            <a href="#carousel-cell2">View cell 2</a>,
+            <a href="#carousel-cell3">View cell 3</a>,
+            <a href="#carousel-cell4">View cell 4</a>,
+            <a href="#carousel-cell5">View cell 5</a>
+        </p>
+        <div class="button-group">
+            <button class="button">Restart</button>
+        </div>
     <script src="vendor/flickity.pkgd.min.js" charset="UTF-8"></script>
+    <script src="js/hash.js" charset="UTF-8"></script>
     <script src="js/script.js" charset="UTF-8"></script>
 </body>
 </html>

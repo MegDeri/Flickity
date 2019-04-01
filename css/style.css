@@ -1,0 +1,55 @@
+* {
+  box-sizing: border-box;
+}
+
+.main-carousel {
+  position: relative;
+}
+
+.carousel-cell {
+  width: 100%;
+  /* full width */
+  min-height: 250px;
+  /* height of carousel */
+  margin-right: 10px;
+}
+
+.container {
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  font-size: 26px;
+  font-family: "Open sans", sans-serif;
+}
+
+.img {
+  height: 500px;
+  width: 100%;
+  background-size: cover;
+}
+
+ol.flickity-page-dots {
+  display: none;
+}
+
+.button {
+  font-size: 22px;
+  background-color: #00b6ff;
+  color: #fff;
+  border: none;
+  position: absolute;
+  top: 40px;
+  left: 10px;
+}
+
+.button-group {
+  margin-bottom: 20px;
+}
+
+.progress-bar {
+  height: 20px;
+  width: 0;
+  background: #00b6ff;
+}
+
+/*# sourceMappingURL=style.css.map */
