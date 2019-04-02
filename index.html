@@ -11,41 +11,47 @@
     <link rel="stylesheet" type="text/css" href="css/style.css">
 </head>
 <body>
-        <div class="main-carousel">
-            <div class="carousel-cell" id="carousel-cell1">
-                <div class="container">First slide</div>
-                <div class="img" style="background-image: url(https://images.pexels.com/photos/1229846/pexels-photo-1229846.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500);"></div>
-            </div>   
-            <div class="carousel-cell" id="carousel-cell2">
-               <div class="container">Second slide</div>
-               <div class="img" style="background-image: url(https://images.pexels.com/photos/2031726/pexels-photo-2031726.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500);"></div>
-            </div>   
-            <div class="carousel-cell" id="carousel-cell3">
-                <div class="container">Third slide</div>
-                <div class="img" style="background-image: url(https://images.pexels.com/photos/1640777/pexels-photo-1640777.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500);"></div>
-            </div>   
-            <div class="carousel-cell" id="carousel-cell4">
-                <div class="container">Fourth slide</div>
-                <div class="img" style="background-image: url(https://images.pexels.com/photos/1048036/pexels-photo-1048036.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500);"></div>
-            </div>   
-            <div class="carousel-cell" id="carousel-cell5">
-                <div class="container">Fifth slide</div>
-                <div class="img" style="background-image: url(https://images.pexels.com/photos/1367188/pexels-photo-1367188.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500);"></div>
-            </div>   
-        </div>
-        <div class="progress-bar"></div>
-        <p>
-            <a href="#carousel-cell1">View cell 1</a>,
-            <a href="#carousel-cell2">View cell 2</a>,
-            <a href="#carousel-cell3">View cell 3</a>,
-            <a href="#carousel-cell4">View cell 4</a>,
-            <a href="#carousel-cell5">View cell 5</a>
-        </p>
-        <div class="button-group">
-            <button class="button">Restart</button>
-        </div>
+    <div class="main-carousel">
+        <div class="carousel-cell" id="carousel-cell1">
+            <div class="container">First slide</div>
+            <div class="img" style="background-image: url(https://images.pexels.com/photos/1229846/pexels-photo-1229846.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500);"></div>
+        </div>   
+        <div class="carousel-cell" id="carousel-cell2">
+            <div class="container">Second slide</div>
+            <div class="img" style="background-image: url(https://images.pexels.com/photos/2031726/pexels-photo-2031726.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500);"></div>
+        </div>   
+        <div class="carousel-cell" id="carousel-cell3">
+            <div class="container">Third slide</div>
+            <div class="img" style="background-image: url(https://images.pexels.com/photos/1640777/pexels-photo-1640777.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500);"></div>
+        </div>   
+        <div class="carousel-cell" id="carousel-cell4">
+            <div class="container">Fourth slide</div>
+            <div class="img" style="background-image: url(https://images.pexels.com/photos/1048036/pexels-photo-1048036.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500);"></div>
+        </div>   
+        <div class="carousel-cell" id="carousel-cell5">
+            <div class="container">Fifth slide</div>
+            <div class="img" style="background-image: url(https://images.pexels.com/photos/1367188/pexels-photo-1367188.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500);"></div>
+        </div>   
+    </div>
+    <div class="progress-bar"></div>
+    <p>
+        <a href="#carousel-cell1">View cell 1</a>,
+        <a href="#carousel-cell2">View cell 2</a>,
+        <a href="#carousel-cell3">View cell 3</a>,
+        <a href="#carousel-cell4">View cell 4</a>,
+        <a href="#carousel-cell5">View cell 5</a>
+    </p>
+    <div class="button-group">
+        <button class="button">Restart</button>
+    </div>
+    <div id="page-wrapper" class="container">
+        <h3>My Google Maps Demo</h3>
+        <div id="map"></div>
+    </div>
     <script src="vendor/flickity.pkgd.min.js" charset="UTF-8"></script>
     <script src="js/hash.js" charset="UTF-8"></script>
+    <script src="js/mustache.js" charset="UTF-8"></script>
     <script src="js/script.js" charset="UTF-8"></script>
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAVQMjDMSc_V23F3yNJR08LhHutfDWtic8"></script>
 </body>
 </html>
