@@ -11,28 +11,7 @@
     <link rel="stylesheet" type="text/css" href="css/style.css">
 </head>
 <body>
-    <div class="main-carousel">
-        <div class="carousel-cell" id="carousel-cell1">
-            <div class="container">First slide</div>
-            <div class="img" style="background-image: url(https://images.pexels.com/photos/1229846/pexels-photo-1229846.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500);"></div>
-        </div>   
-        <div class="carousel-cell" id="carousel-cell2">
-            <div class="container">Second slide</div>
-            <div class="img" style="background-image: url(https://images.pexels.com/photos/2031726/pexels-photo-2031726.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500);"></div>
-        </div>   
-        <div class="carousel-cell" id="carousel-cell3">
-            <div class="container">Third slide</div>
-            <div class="img" style="background-image: url(https://images.pexels.com/photos/1640777/pexels-photo-1640777.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500);"></div>
-        </div>   
-        <div class="carousel-cell" id="carousel-cell4">
-            <div class="container">Fourth slide</div>
-            <div class="img" style="background-image: url(https://images.pexels.com/photos/1048036/pexels-photo-1048036.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500);"></div>
-        </div>   
-        <div class="carousel-cell" id="carousel-cell5">
-            <div class="container">Fifth slide</div>
-            <div class="img" style="background-image: url(https://images.pexels.com/photos/1367188/pexels-photo-1367188.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500);"></div>
-        </div>   
-    </div>
+    <div class="main-carousel"></div>
     <div class="progress-bar"></div>
     <p>
         <a href="#carousel-cell1">View cell 1</a>,
@@ -48,6 +27,46 @@
         <h4>My Google Maps Demo</h4>
         <div id="map" class="map"></div>
     </div>
+    <script id="carousel-cell" type="x-tmpl-mustache">
+        <div class="carousel-cell" id={{id}}>
+            <div class="container"><h1>{{title}}</h1></div>
+            <div> {{{description}}} </div>
+        </div>
+    </script>
+    <script>
+        var slideData = [
+            {
+                coords: '{lat: -24.363, lng: 130.044}',
+                id: 'carousel-cell1',
+                title: 'Slide 1',
+                description: "<img class='img' src='https://images.pexels.com/photos/1229846/pexels-photo-1229846.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500' alt='Photo placeholder'>"
+            },
+            {
+                coords: '{lat: -24.963, lng: 130.944}',
+                id: 'carousel-cell2',
+                title: 'Slide 2',
+                description: "<img class='img' src='https://images.pexels.com/photos/2031726/pexels-photo-2031726.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500' alt='Photo placeholder'>"
+            },
+            {
+                coords: '{lat: -22.963, lng: 129.944}',
+                id: 'carousel-cell3',
+                title: 'Slide 3',
+                description: "<img class='img' src='https://images.pexels.com/photos/1640777/pexels-photo-1640777.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500' alt='Photo placeholder'>"
+            },
+            {
+                coords: '{lat: -22.963, lng: 129.944}',
+                id: 'carousel-cell4',
+                title: 'Slide 4',
+                description: "<img class='img' src='https://images.pexels.com/photos/1048036/pexels-photo-1048036.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500' alt='Photo placeholder'>"
+            },
+            {
+                coords: '{lat: -22.963, lng: 129.944}',
+                id: 'carousel-cell5',
+                title: 'Slide 5',
+                description: "<img class='img' src='https://images.pexels.com/photos/1367188/pexels-photo-1367188.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500' alt='Photo placeholder'>"
+            }
+        ];
+    </script>    
     <script src="vendor/flickity.pkgd.min.js" charset="UTF-8"></script>
     <script src="js/hash.js" charset="UTF-8"></script>
     <script src="js/mustache.js" charset="UTF-8"></script>

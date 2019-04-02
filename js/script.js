@@ -1,14 +1,14 @@
 var elem = document.querySelector('.main-carousel');
-/*var slideList = document.getElementById('carousel-cell').innerHTML;
+var slideList = document.getElementById('carousel-cell').innerHTML;
 Mustache.parse(slideList);
 var slideCon = '';
 // Loop for creating slides
 for (var i = 0; i < slideData.length; i++) {
   console.log(slideData);
   slideCon += Mustache.render(slideList, slideData[i]);
-}*/
+}
 
-//elem.insertAdjacentHTML('beforeend', slideCon);
+elem.insertAdjacentHTML('beforeend', slideCon);
 
 var flkty = new Flickity( elem, {
   // options
@@ -43,7 +43,7 @@ flkty.on( 'scroll', function( progress ) {
 
 window.initMap = function() {
   // The location of Uluru
-  var uluru = {lat: -25.344, lng: 131.036};
+  var uluru = {lat: -24.363, lng: 130.044};
   // The map, centered at Uluru
   var map = new google.maps.Map(document.getElementById('map'), {
     zoom: 4,

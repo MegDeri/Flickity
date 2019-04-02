@@ -25,7 +25,8 @@
 .img {
   height: 500px;
   width: 100%;
-  background-size: cover;
+  object-fit: cover;
+  display: block;
 }
 
 ol.flickity-page-dots {
@@ -38,8 +39,8 @@ ol.flickity-page-dots {
   color: #fff;
   border: none;
   position: absolute;
-  top: 40px;
-  left: 10px;
+  top: 130px;
+  left: 0;
 }
 
 .button-group {
