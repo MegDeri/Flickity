@@ -40,7 +40,7 @@ flkty.on( 'scroll', function( progress ) {
 });
 
 // Initialize and add the map
-(function () {
+
 window.initMap = function() {
   // The location of Uluru
   var uluru = {lat: -25.344, lng: 131.036};
@@ -56,7 +56,6 @@ window.initMap = function() {
   });
 }
 
-})();
 
 
 
