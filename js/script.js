@@ -8,7 +8,7 @@ for (var i = 0; i < slideData.length; i++) {
   slideCon += Mustache.render(slideList, slideData[i]);
 }*/
 
-elem.insertAdjacentHTML('beforeend', slideCon);
+//elem.insertAdjacentHTML('beforeend', slideCon);
 
 var flkty = new Flickity( elem, {
   // options
@@ -40,6 +40,7 @@ flkty.on( 'scroll', function( progress ) {
 });
 
 // Initialize and add the map
+(function () {
 window.initMap = function() {
   // The location of Uluru
   var uluru = {lat: -25.344, lng: 131.036};
@@ -50,10 +51,14 @@ window.initMap = function() {
   });
   // The marker, positioned at Uluru
   var marker = new google.maps.Marker({
-  position: uluru,
-  map: map
+    position: uluru,
+    map: map
   });
 }
+
+})();
+
+
 
 
 
