@@ -7,7 +7,7 @@ for (var i = 0; i < slideData.length; i++) {
   console.log(slideData);
   slideCon += Mustache.render(slideList, slideData[i]);
 }
-
+//Display slides in html
 elem.insertAdjacentHTML('beforeend', slideCon);
 
 var flkty = new Flickity( elem, {
@@ -43,22 +43,24 @@ flkty.on( 'scroll', function( progress ) {
 
 window.initMap = function() {
   // The location of Uluru
-  var uluru = {lat: -24.363, lng: 130.044};
+  var sydney = slideData[0].coords;
   // The map, centered at Uluru
   var map = new google.maps.Map(document.getElementById('map'), {
     zoom: 4,
-    center: uluru
+    center: sydney
   });
-  // The marker, positioned at Uluru
-  var marker = new google.maps.Marker({
-    position: uluru,
-    map: map
-  });
+  // Loop for adding coords to the slides
+  for (var y = 0; y < slideData.length; y++) {
+    addMarker(slideData[y].coords);
+  } 
+  //Add marker function
+  function addMarker(point) {
+    var marker = new google.maps.Marker({
+      position: point,
+      map: map
+    });
+  } 
 }
-
-
-
-
 
 
 
