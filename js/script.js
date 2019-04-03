@@ -40,7 +40,6 @@ flkty.on( 'scroll', function( progress ) {
 });
 
 // Initialize and add the map
-
 window.initMap = function() {
   // The location of Uluru
   var sydney = slideData[0].coords;
