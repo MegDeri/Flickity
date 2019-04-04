@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Carusel</title>
+    <title>Template html from mustache</title>
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Damion|Open+Sans|Roboto+Condensed">
     <link rel="stylesheet" type="text/css" href="vendor/normalize.css">
@@ -11,41 +11,45 @@
     <link rel="stylesheet" type="text/css" href="css/style.css">
 </head>
 <body>
-        <div class="main-carousel">
-            <div class="carousel-cell" id="carousel-cell1">
-                <div class="container">First slide</div>
-                <div class="img" style="background-image: url(https://images.pexels.com/photos/1229846/pexels-photo-1229846.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500);"></div>
-            </div>   
-            <div class="carousel-cell" id="carousel-cell2">
-               <div class="container">Second slide</div>
-               <div class="img" style="background-image: url(https://images.pexels.com/photos/2031726/pexels-photo-2031726.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500);"></div>
-            </div>   
-            <div class="carousel-cell" id="carousel-cell3">
-                <div class="container">Third slide</div>
-                <div class="img" style="background-image: url(https://images.pexels.com/photos/1640777/pexels-photo-1640777.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500);"></div>
-            </div>   
-            <div class="carousel-cell" id="carousel-cell4">
-                <div class="container">Fourth slide</div>
-                <div class="img" style="background-image: url(https://images.pexels.com/photos/1048036/pexels-photo-1048036.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500);"></div>
-            </div>   
-            <div class="carousel-cell" id="carousel-cell5">
-                <div class="container">Fifth slide</div>
-                <div class="img" style="background-image: url(https://images.pexels.com/photos/1367188/pexels-photo-1367188.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500);"></div>
-            </div>   
+    <div class="main-carousel"></div>
+    <script id="carousel-cell" type="x-tmpl-mustache">
+        <div class="container">
+            <h1>{{title}}</h1>
+            {{{description}}}
         </div>
-        <div class="progress-bar"></div>
-        <p>
-            <a href="#carousel-cell1">View cell 1</a>,
-            <a href="#carousel-cell2">View cell 2</a>,
-            <a href="#carousel-cell3">View cell 3</a>,
-            <a href="#carousel-cell4">View cell 4</a>,
-            <a href="#carousel-cell5">View cell 5</a>
-        </p>
-        <div class="button-group">
-            <button class="button">Restart</button>
-        </div>
+    </script>
+    <script>
+        var slideData = [
+            {
+                image: 'Ball', 
+                title: 'Slide 1',
+                description: "<p>Lorem ipsum.</p> <img src='http://via.placeholder.com/400x200' alt='Photo placeholder'> <p>Dolor sit.</p>"
+            },
+            {
+                image: 'Cat', 
+                title: 'Slide 2',
+                description: "<p>Lorem ipsum.</p> <img src='http://via.placeholder.com/400x200' alt='Photo placeholder'> <p>Dolor sit.</p>"
+            },
+            {
+                image: 'Dog', 
+                title: 'Slide 3',
+                description: "<p>Lorem ipsum.</p> <img src='http://via.placeholder.com/400x200' alt='Photo placeholder'> <p>Dolor sit.</p>"
+            },
+            {
+                image: 'Pic', 
+                title: 'Slide 4',
+                description: "<p>Lorem ipsum.</p> <img src='http://via.placeholder.com/400x200' alt='Photo placeholder'> <p>Dolor sit.</p>"
+            },
+            {
+                image: 'Football', 
+                title: 'Slide 5',
+                description: "<p>Lorem ipsum.</p> <img src='http://via.placeholder.com/400x200' alt='Photo placeholder'> <p>Dolor sit.</p>"
+            }
+        ];
+    </script>
     <script src="vendor/flickity.pkgd.min.js" charset="UTF-8"></script>
     <script src="js/hash.js" charset="UTF-8"></script>
+    <script src="js/mustache.js" charset="UTF-8"></script>
     <script src="js/script.js" charset="UTF-8"></script>
 </body>
 </html>
