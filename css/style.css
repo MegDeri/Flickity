@@ -8,9 +8,7 @@
 
 .carousel-cell {
   width: 100%;
-  /* full width */
   min-height: 250px;
-  /* height of carousel */
   margin-right: 10px;
 }
 
@@ -55,9 +53,7 @@ ol.flickity-page-dots {
 
 .map {
   height: 500px;
-  /* The height is 400 pixels */
   width: 100%;
-  /* The width is the width of the web page */
 }
 
 /*# sourceMappingURL=style.css.map */

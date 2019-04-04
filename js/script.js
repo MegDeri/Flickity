@@ -41,9 +41,8 @@ flkty.on( 'scroll', function( progress ) {
 
 // Initialize and add the map
 window.initMap = function() {
-  // The location of Uluru
   var sydney = slideData[0].coords;
-  // The map, centered at Uluru
+  // The map, centered at Sydney
   var map = new google.maps.Map(document.getElementById('map'), {
     zoom: 4,
     center: sydney
@@ -60,7 +59,3 @@ window.initMap = function() {
     });
   } 
 }
-
-
-
-
