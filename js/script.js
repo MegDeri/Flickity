@@ -60,17 +60,30 @@
           map: map
         });
         //Click on marker and join markers with slides
-
-        for(var z = 0; z < marker.length; z++) {
-          marker[z].addListener('click', function(){
-            var slideJoin = document.querySelectorAll('carousel-cell');
+        
+          for(var z = 0; z < marker.length; z++) {
+            marker[z].addListener('click', function(){
+            /*var slideJoin = document.querySelectorAll('carousel-cell');
             for( var x = 0; x < slideJoin.length; x++){
               if( slideJoin[x].coords == marker[z].position){
                 return slideJoin[x];
               }
-            }
-          });	
-        }	
+            }*/
+            
+              var index = markers[z];
+              flkty.select( index );
+            });	
+          }	
+          //Zooming after clik on marker
+          /*var startingZoom = map.getZoom();
+          var steps = Math.abs(startingZoom - zoom);
+          var stepChange = - (startingZoom - zoom) / steps;
+          
+          flkty.on( 'change', function( markerZoom ) {
+           var markerZoom = map.setZoom(Math.round(startingZoom + stepChange));
+          }, 80);
+           
+          });*/
       }
       
     } 
