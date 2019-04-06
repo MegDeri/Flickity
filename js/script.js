@@ -1,5 +1,4 @@
-(function(){
-
+(function() {
   var elem = document.querySelector('.main-carousel');
   var slideList = document.getElementById('carousel-cell').innerHTML;
   Mustache.parse(slideList);
@@ -57,37 +56,17 @@
       function addMarker(point) {
         var marker = new google.maps.Marker({
           position: point,
-          map: map
+          map: map,
+          index: y,
         });
         //Click on marker and join markers with slides
-        
-          for(var z = 0; z < marker.length; z++) {
-            marker[z].addListener('click', function(){
-            /*var slideJoin = document.querySelectorAll('carousel-cell');
-            for( var x = 0; x < slideJoin.length; x++){
-              if( slideJoin[x].coords == marker[z].position){
-                return slideJoin[x];
-              }
-            }*/
-            
-              var index = markers[z];
-              flkty.select( index );
-            });	
-          }	
+        marker.addListener("click", function(){
+          flkty.select(this.index);
           //Zooming after clik on marker
-          /*var startingZoom = map.getZoom();
-          var steps = Math.abs(startingZoom - zoom);
-          var stepChange = - (startingZoom - zoom) / steps;
-          
-          flkty.on( 'change', function( markerZoom ) {
-           var markerZoom = map.setZoom(Math.round(startingZoom + stepChange));
-          }, 80);
-           
-          });*/
+          map.setZoom(6);
+          map.panTo(this.getPosition());
+        })
       }
-      
     } 
   }
-
-
 })();
