@@ -1,4 +1,4 @@
-(function() {
+(function () {
   var elem = document.querySelector('.main-carousel');
   var slideList = document.getElementById('carousel-cell').innerHTML;
   Mustache.parse(slideList);
@@ -11,8 +11,8 @@
   //Display slides in html
   elem.insertAdjacentHTML('beforeend', slideCon);
 
-  var flkty = new Flickity( elem, {
-    // options
+  var flkty = new Flickity(elem, {
+    // options 2
     hash: true,
     cellAlign: 'left',
     contain: true,
@@ -21,27 +21,27 @@
   //button restart
   var buttonGroup = document.querySelector('.button-group');
   var buttons = buttonGroup.querySelectorAll('.button');
-  buttons = fizzyUIUtils.makeArray( buttons );
+  buttons = fizzyUIUtils.makeArray(buttons);
 
-  buttonGroup.addEventListener( 'click', function( event ) {
+  buttonGroup.addEventListener('click', function (event) {
     // filter for button clicks
-    if ( !matchesSelector( event.target, '.button' ) ) {
+    if (!matchesSelector(event.target, '.button')) {
       return;
     }
-    var index = buttons.indexOf( event.target );
-    flkty.select( index );
+    var index = buttons.indexOf(event.target);
+    flkty.select(index);
   });
 
   //Add progress bar below slides
   var progressBar = document.querySelector('.progress-bar')
 
-  flkty.on( 'scroll', function( progress ) {
-    progress = Math.max( 0, Math.min( 1, progress ) );
+  flkty.on('scroll', function (progress) {
+    progress = Math.max(0, Math.min(1, progress));
     progressBar.style.width = progress * 100 + '%';
   });
 
   // Initialize and add the map
-  window.initMap = function() {
+  window.initMap = function () {
     // The location of Sydney
     var sydney = slideData[0].coords;
     // The map, centered at Sydney
@@ -52,7 +52,7 @@
     // Loop for adding coords to the slides
     for (var y = 0; y < slideData.length; y++) {
       addMarker(slideData[y].coords);
-        //Add marker function
+      //Add marker function
       function addMarker(point) {
         var marker = new google.maps.Marker({
           position: point,
@@ -60,13 +60,13 @@
           index: y,
         });
         //Click on marker and join markers with slides
-        marker.addListener("click", function(){
+        marker.addListener("click", function () {
           flkty.select(this.index);
           //Zooming after clik on marker
           map.setZoom(6);
           map.panTo(this.getPosition());
         })
       }
-    } 
+    }
   }
 })();
